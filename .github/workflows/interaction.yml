@@ -10,6 +10,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Print to log
         run: echo "hello log"
+      - name: fetch
+        run: git fetch
       - name: Create branch
         run: git switch -c "pr-branch2"
       - name: cherry-pick
