@@ -6,6 +6,6 @@ on:
 jobs:
   print:
     runs-on: ubuntu-latest
-      steps:
-        - name: Print to log
-          run: echo "hello log"
+    steps:
+      - name: Print to log
+        run: echo "hello log"
