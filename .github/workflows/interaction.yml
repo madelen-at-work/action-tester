@@ -1,0 +1,11 @@
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print to log
+        run: echo "hello log"
