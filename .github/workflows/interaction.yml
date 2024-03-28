@@ -10,6 +10,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Print to log
         run: echo "hello log"
+      - name: Create branch
+        run: git switch -c "pr-branch"
       - name: Create pr
         run: gh pr create --title "test pr from gh" --body "Could this work?"
         env:
