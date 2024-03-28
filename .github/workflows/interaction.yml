@@ -13,6 +13,6 @@ jobs:
       - name: Create branch
         run: git switch -c "pr-branch"
       - name: Create pr
-        run: gh pr create --title "test pr from gh" --body "Could this work?"
+        run: gh pr create --title "test pr from gh" --body "Could this work?" --base main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
