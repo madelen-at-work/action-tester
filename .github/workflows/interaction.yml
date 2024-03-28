@@ -13,7 +13,7 @@ jobs:
       - name: Create branch
         run: git switch -c "pr-branch2"
       - name: cherry-pick
-        run: git cherry-pick d043685e852bd86b0d75e880ce2625f54a404bc1
+        run: git cherry-pick "d043685e852bd86b0d75e880ce2625f54a404bc1"
       - name: Create pr
         run: gh pr create --title "test pr from gh" --body "Could this work?" --base main --repo madelen-at-work/action-tester
         env:
