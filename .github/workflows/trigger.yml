@@ -20,7 +20,7 @@ jobs:
           git switch -c "pr-branch"
           git remote add other https://github.com/madelen-at-work/action-tester.git
           git fetch other
-          git cherry-pick "d043685e852bd86b0d75e880ce2625f54a404bc1"
+          git cherry-pick "d043685e852bd86b0d75e880ce2625f54a404bc1" --strategy-option theirs
           git push --set-upstream origin pr-branch
           gh pr create --title "test pr from gh" --body "Could this work?" --base main --repo madelen-at-work/action-tester2
         env:
