@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: clone 2nd repo
         run: |
-          git clone https://github.com/madelen-at-work/action-tester.git2
+          git clone https://github.com/madelen-at-work/action-tester2.git
           git config user.name github-actions
           git config user.email github-actions@github.com
           git fetch
