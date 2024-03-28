@@ -12,7 +12,13 @@ jobs:
         run: echo "hello log"
       - name: Create branch
         run: git switch -c "pr-branch"
+      - name: Make change
+        run: echo "test">>hello-world.py
+      - name: add change
+        run: git add .
+      - name: commit change
+        run: git commit -m "dummy change"
       - name: Create pr
-        run: gh pr create --title "test pr from gh" --body "Could this work?"
+        run: gh pr create --title "test pr from gh" --body "Could this work?" --base main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
