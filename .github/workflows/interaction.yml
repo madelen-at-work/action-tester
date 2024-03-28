@@ -19,6 +19,7 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git cherry-pick "d043685e852bd86b0d75e880ce2625f54a404bc1"
+          git push --set-upstream origin pr-branch2
       - name: Create pr
         run: gh pr create --title "test pr from gh" --body "Could this work?" --base main --repo madelen-at-work/action-tester
         env:
