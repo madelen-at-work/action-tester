@@ -9,3 +9,7 @@ jobs:
     steps:
       - name: Print to log
         run: echo "hello log"
+      - name: Create pr
+        run: gh pr create --title "test pr from gh" --body "Could this work?"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
