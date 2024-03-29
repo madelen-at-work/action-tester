@@ -5,4 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print to log
-        run: echo "hello log ${RANDOM}"
+        run: |
+          echo "hello log ${RANDOM}"
+          somevar="text_with_random_${RANDOM}"
+          echo "envvar=${somevar}" >> $GITHUB_ENV
+          echo "print somevar $somevar or ${somevar}"
+          echo "print envar $envar or ${envar} or ${{ env.envar }}"
