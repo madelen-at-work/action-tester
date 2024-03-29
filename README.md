@@ -1,2 +1,3 @@
 # action-tester
-repo for testing actions and workflows
+
+Repo for testing triggering a workflow from one repo to another.
