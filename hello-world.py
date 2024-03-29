@@ -1,5 +1,5 @@
-def main():
-    print("Hello world! from action-tester")
+def main(name="action-tester"):
+    print(f"Hello world! from {name}")
 
 if __name__ == "__main__":
-    main()
+    main("main caller")
