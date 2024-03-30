@@ -1,5 +1,7 @@
 on:
-  push:
+  pull_request:
+    types:
+      - closed
     branches:
       - 'main'
     paths-ignore:
@@ -7,6 +9,7 @@ on:
 
 jobs:
   send-dispatch:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Send dispatch to 2nd repo
