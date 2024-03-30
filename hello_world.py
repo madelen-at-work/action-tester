@@ -1,8 +1,8 @@
 ''' hello_world module '''
 
-NAME="action-tester"
+DEFAULT_NAME="action-tester"
 
-def main(name=NAME):
+def main(name=DEFAULT_NAME):
     ''' The main function '''
     print(f"Hello world! from {name}")
 
